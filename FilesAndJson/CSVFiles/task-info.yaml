@@ -3,8 +3,8 @@ files:
 - name: src/Task.java
   visible: true
   placeholders:
-  - offset: 282
-    length: 68
+  - offset: 851
+    length: 1
     placeholder_text: |-
       /* TODO.
       Change what needs to go here to start reading "filename" */
@@ -12,22 +12,22 @@ files:
       length: 68
       offset: 282
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Failed
     encrypted_possible_answer: new BufferedInputStream(new FileInputStream(filename))
-  - offset: 381
-    length: 83
+  - offset: 851
+    length: 1
     placeholder_text: "/* TODO \nCreate a byte array of about 1024 bytes or however\
       \ many bytes you want. */"
     initial_state:
       length: 83
       offset: 381
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Failed
     encrypted_possible_answer: new byte[1024]
-  - offset: 506
-    length: 145
+  - offset: 851
+    length: 1
     placeholder_text: "/* TODO \nCreate a while loop to read the contents of the file\
       \ and put them in the variable \"contents\" declared at the beginning of the\
       \ method. */"
@@ -35,31 +35,31 @@ files:
       length: 145
       offset: 506
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Failed
     encrypted_possible_answer: |-
       while ((lengthRead = in.read(buffer)) > 0) {
                       contents = contents + new String(buffer,0,lengthRead);
                   }
-  - offset: 669
-    length: 43
+  - offset: 851
+    length: 2
     placeholder_text: "/* TODO \nPut the correct Exception here. */"
     initial_state:
       length: 43
       offset: 669
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Failed
     encrypted_possible_answer: IOException e
-  - offset: 802
-    length: 71
+  - offset: 851
+    length: 2
     placeholder_text: "/* TODO \nReturn a Databse object initialized with the contents\
       \ read. */"
     initial_state:
       length: 71
       offset: 802
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Failed
     encrypted_possible_answer: ' new Database(contents'
   text: "import java.io.*;\n\npublic class Task {\n    public static void main(String[]\
@@ -103,14 +103,14 @@ files:
   visible: true
   placeholders:
   - offset: 587
-    length: 128
+    length: 127
     placeholder_text: "/* TODO \nThis constructor should take the contents of a CSV\
       \ file and initialize the memember variables of the Database class.\n*/"
     initial_state:
       length: 128
       offset: 587
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Failed
     encrypted_possible_answer: |2-
               String[] lines = contents.split("\n");
@@ -120,8 +120,8 @@ files:
                   this.data[i - 1] = lines[i].split(",");
               }
               this.numRows = lines.length - 1;
-  - offset: 778
-    length: 104
+  - offset: 1293
+    length: 105
     placeholder_text: |-
       /* TODO */
       This method should return the data contained on row "row" and the column matching  @columname
@@ -129,7 +129,7 @@ files:
       length: 104
       offset: 778
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Failed
     encrypted_possible_answer: |2-
               int col = 0;
@@ -154,6 +154,6 @@ files:
   learner_created: false
 status: Failed
 feedback:
-  message: Compilation Failed
-  time: Thu, 03 Jun 2021 20:07:32 UTC
+  message: 1
+  time: Tue, 22 Jun 2021 14:35:34 UTC
 record: -1
