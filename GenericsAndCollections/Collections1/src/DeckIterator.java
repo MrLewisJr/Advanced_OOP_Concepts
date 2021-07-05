@@ -1,22 +1,27 @@
 import java.util.Iterator;
 
-public class DeckIterator<E> /* TODO
-Implement the Iterator interface */ {
+/* TODO
+Implement the Iterator interface */
+public class DeckIterator<E> implements Iterator<E>{
+
+   /* TODO
+initialize the variable d */
     Deck d;
     public DeckIterator(Deck d){
-/* TODO
-initialize the variable d */
+        this.d = d;
     }
 
+    /* TODO
+Return true if there are elements left in the Deck */
     @Override
     public boolean hasNext() {
-       /* TODO
-Return true if there are elements left in the Deck */
+        return this.d.size() > 0;
     }
 
+    /* TODO
+Deal a card and return it. */
     @Override
     public E next() {
-        /* TODO
-Deal a card and return it. */
+        return (E) d.dealCard();
     }
 }

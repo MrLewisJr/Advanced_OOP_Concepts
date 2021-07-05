@@ -15,15 +15,30 @@ public class Task {
         System.out.println("Hand is:"+hand);
         System.out.println("Cards add:"+addCards(hand));
 
-
-        for(Card /* TODO
-Compete a for loop that prints every card
-in the deck d */
-
+        /* TODO Compete a for loop that prints every card in the deck d */
+        for( Card card: d ) {
+            System.out.println( card );
+        }
     }
 
-    public static int addCards(ArrayList<Card> hand){
+
  /* TODO 
 This should compute the sum of values of the cards in an ArrayList of cards.*/
+
+        public static int addCards(ArrayList<Card> hand){
+            int sum = 0;
+            for ( int i = 0; i < hand.size(); i++ ) {
+                if ( ( hand.get(i).getValue() + "" ).equals("Ace") )
+                    sum += 1;
+                else if ( ( hand.get(i).getValue() + "" ).equals("Jack") )
+                    sum += 11;
+                else if ( ( hand.get(i).getValue() + "" ).equals("Queen") )
+                    sum += 12;
+                else if ( ( hand.get(i).getValue() + "" ).equals("King") )
+                    sum += 13;
+                else
+                    sum = sum + Integer.parseInt( hand.get(i).getValue().toString() );
+        }
+        return sum;
     }
 }
