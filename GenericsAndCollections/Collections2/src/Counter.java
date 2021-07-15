@@ -52,3 +52,4 @@ Returns the most frequent key in the HashMap*/
         return temp;
         }
     }
+                
