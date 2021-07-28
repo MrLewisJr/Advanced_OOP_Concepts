@@ -3,21 +3,78 @@ import java.util.List;
 
 public class Resume {
 /* TODO */
-Create a public member inner class Education according to the specifications.
+    public class Education {
+         String school;
+         String major;
 
-/* TODO */
-Create a public static inner class called Experience, according to the specifications.
-
-/* TODO */
-Create the Person and List of Education and List of experience objects. They should be private.
-    public Resume(Person p){
-/* TODO */
-This constructor should initialize the person and do all necessary initializations for the other methods to work.
+        public Education( String schoolName, String major){
+            this.school = schoolName;
+            this.major = major;
+        }
+        void setSchoolName( String schoolName ){
+            this.school = schoolName;
+        }
+        void setMajor( String major ){
+            this.major = major;
+        }
+        String getSchoolName() {
+            return this.school;
+        }
+        String getMajor() {
+            return this.major;
+        }
+        @Override
+        public String toString() {
+            return getMajor()+" at "+getSchoolName();
+        }
     }
 
 /* TODO */
-Create the addEducation, addExperience and override the toString methods as specified.
+    public static class Experience {
+         String title;
+         int startYear, toYear;
 
+    public Experience(String title, int startYear, int toYear){
+        this.title = title;
+        this.startYear = startYear;
+        this.toYear = toYear;
+    }
+        @Override
+        public String toString() {
+            return this.startYear+"-"+this.toYear+":"+ this.title;
+        }
+    }
+    /* TODO */
 
+    private Person p;
+    private ArrayList<Education> educationList;
+    private ArrayList<Experience> experienceList;
 
+    /* TODO */
+    public Resume(Person p) {
+        this.p = p;
+        this.educationList= new ArrayList<Education>();
+        this.experienceList = new ArrayList<Experience>();
+    }
+
+/* TODO */
+
+    public void addEducation(Education education){
+        this.educationList.add(education);
+    }
+    public void addExperience(Experience experience){
+        this.experienceList.add(experience);
+    }
+    @Override
+    public String toString(){
+        String resume = this.p.toString() + "\n"+"Experience" + "\n";
+        for(Experience e: experienceList){
+            resume += e.toString()+"\n";
+        }
+        resume += "Education" + "\n";
+        for(Education e: educationList){
+            resume += e.toString()+"\n";
+        }
+        return resume;
+    }
 }
